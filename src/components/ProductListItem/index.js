@@ -52,9 +52,6 @@ const ProductListItem = ({ item, addToCart, classes }) => {
           <Typography type="headline" component="h1">
             {item.name}
           </Typography>
-          <Typography component="p">
-            {/*{item.discount}*/}
-          </Typography>
         </CardContent>
         <CardActions className={classes.muiCardAction}>
           <Button fab color="accent" className={classes.button} onClick={addToCart}>
