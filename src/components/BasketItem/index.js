@@ -23,6 +23,9 @@ const BasketItem = ({ item, addToBasket, removeFromBasket, removeAll }) => {
           <RemoveCircle/>
         </IconButton>
       </TableCell>
+      <TableCell>
+        {item.discount === undefined ? '-' : item.discount.text}
+      </TableCell>
       <TableCell numeric>
         {(item.price * item.quantity).toFixed(2)}
       </TableCell>
