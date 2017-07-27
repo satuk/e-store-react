@@ -10,7 +10,6 @@ const TotalPrice = ({ basket }) => {
   return (
     <div>
       <Divider/>
-      <Divider/>
       <div style={{ paddingTop: 25, }}>
         <Typography type="title">
           Total Price: {calcTotalPrice(basket)}
