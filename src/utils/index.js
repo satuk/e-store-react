@@ -10,11 +10,11 @@ export const calcTotalPrice = (basket) => {
     else return acc + (item.quantity * item.price);
   }, 0);
 
-  return total.toFixed(2);
+  return `${total.toFixed(2)} CHF`;
 };
 
 export const calcQuantityPrice = item => {
-  return (item.quantity * item.price).toFixed(2);
+  return `${(item.quantity * item.price).toFixed(2)}.-`;
 };
 
 export const totalItem = basket => {
