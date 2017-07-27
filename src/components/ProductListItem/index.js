@@ -10,6 +10,7 @@ import {createStyleSheet, withStyles} from "material-ui/styles";
 import Card, {CardActions, CardContent, CardMedia} from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import Button from "material-ui/Button";
+import Avatar from "material-ui/Avatar";
 
 const styleSheet = createStyleSheet('ProductListItem', {
   card: {
@@ -42,6 +43,12 @@ const styleSheet = createStyleSheet('ProductListItem', {
     justifyContent: 'center',
     backgroundColor: 'lightsteelblue',
   },
+  muiAvatar: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    backgroundColor: 'red',
+  }
 });
 
 const ProductListItem = ({ item, addToCart, classes }) => {
@@ -49,6 +56,7 @@ const ProductListItem = ({ item, addToCart, classes }) => {
     <div>
       <Card className={classes.card}>
         <CardMedia className={classes.cardMedia}>
+          {item.discount ? <Avatar className={classes.muiAvatar}>%</Avatar> : ''}
           <img className={classes.img} src={item.img} alt={item.name}/>
         </CardMedia>
         <CardContent className={classes.muiCardContent}>
