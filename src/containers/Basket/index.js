@@ -2,12 +2,12 @@
  * Created by satuk on 21.07.17.
  */
 import React, {Component} from "react";
-import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import Table, {TableBody, TableCell, TableHead, TableRow} from "material-ui/Table";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import {createStyleSheet, withStyles} from "material-ui/styles";
 import Paper from "material-ui/Paper";
-import BasketItem from '../../components/BasketItem';
+import BasketItem from "../../components/BasketItem";
 
 const styleSheet = createStyleSheet('Basket', theme => ({
   paper: {
@@ -22,7 +22,7 @@ class Basket extends Component {
       return <div>the basket is empty. add a product from the lift side :) </div>
     }
 
-    const {basket, classes} = this.props;
+    const { basket, classes } = this.props;
 
     return (
       <Paper className={classes.paper}>
@@ -31,6 +31,7 @@ class Basket extends Component {
             <TableRow>
               <TableCell>Name</TableCell>
               <TableCell numeric>Quantity</TableCell>
+              <TableCell>Discount</TableCell>
               <TableCell numeric>Price</TableCell>
               <TableCell>Remove</TableCell>
             </TableRow>
@@ -38,7 +39,7 @@ class Basket extends Component {
           <TableBody>
             {basket.map(item => {
               return (
-                <BasketItem key={item.id} item={item} />
+                <BasketItem key={item.id} item={item}/>
               );
             })}
           </TableBody>
