@@ -21,9 +21,12 @@ const styleSheet = createStyleSheet('ProductListItem', {
   },
   img: {
     width: '100%',
+    objectFit: 'cover',
+    height: 125,
   },
   cardMedia: {
-    minHeight: 200,
+    maxHeight: 153,
+    maxWidth: 153,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -49,7 +52,7 @@ const ProductListItem = ({ item, addToCart, classes }) => {
           <img className={classes.img} src={item.img} alt={item.name}/>
         </CardMedia>
         <CardContent className={classes.muiCardContent}>
-          <Typography type="headline" component="h1">
+          <Typography type="title">
             {item.name}
           </Typography>
         </CardContent>
