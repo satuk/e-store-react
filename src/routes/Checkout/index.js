@@ -15,9 +15,7 @@ const Checkout = ({ basket }) => {
 
   return (
     <Layout>
-      {
-        basket.map(item => <Basket item={item} key={item.id}/>)
-      }
+      <Receipt basket={basket}/>
     </Layout>
   );
 };
