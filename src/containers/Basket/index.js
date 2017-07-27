@@ -19,7 +19,7 @@ const styleSheet = createStyleSheet('Basket', theme => ({
 class Basket extends Component {
   render() {
     if ( !this.props.basket.length ) {
-      return <div>the basket is empty. add a product from the lift side :) </div>
+      return <div>the basket is empty. add a product from the left side :) </div>
     }
 
     const { basket, classes } = this.props;
