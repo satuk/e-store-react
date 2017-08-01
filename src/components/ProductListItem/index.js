@@ -26,8 +26,8 @@ const styleSheet = createStyleSheet('ProductListItem', {
     height: 125,
   },
   cardMedia: {
-    maxHeight: 153,
-    maxWidth: 153,
+    maxHeight: 160,
+    maxWidth: 160,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -62,6 +62,9 @@ const ProductListItem = ({ item, addToCart, classes }) => {
         <CardContent className={classes.muiCardContent}>
           <Typography type="title">
             {item.name}
+          </Typography>
+          <Typography type="body1">
+            {`${item.price}.-`}
           </Typography>
         </CardContent>
         <CardActions className={classes.muiCardAction}>
