@@ -34,7 +34,7 @@ injectTapEventPlugin();
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
-      <Router basename="/e-store-react">
+      <Router basename="/react-shopping-cart">
         <Switch>
           <Route exact path={"/"} component={Home}/>
           <Route exact path={"/checkout"} component={Checkout}/>

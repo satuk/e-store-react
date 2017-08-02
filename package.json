@@ -2,7 +2,7 @@
   "name": "e-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://satuk.github.io/e-store-react",
+  "homepage": "http://satuk.github.io/react-shopping-cart",
   "dependencies": {
     "material-ui": "next",
     "material-ui-icons": "^1.0.0-alpha.19",
